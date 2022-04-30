@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { useRef } from "react";
+import { useRef } from "react";     //reach elements
 import * as tf from "@tensorflow/tfjs";
 import * as faceLandmarksDetection from "@tensorflow-models/face-landmarks-detection";
 import Webcam from "react-webcam";
@@ -11,11 +11,11 @@ function App() {
   const canvasRef = useRef(null);
 
   const runFacemesh = async () => {
-    const net = await faceLandmarksDetection.load(
+    const net = await faceLandmarksDetection.load(    //create model
       faceLandmarksDetection.SupportedPackages.mediapipeFacemesh
     );
 
-    setInterval(() => {
+    setInterval(() => {   //repeat detect(net) evry 300 seconds
       detect(net);
     }, 300);
   };
