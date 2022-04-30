@@ -34,7 +34,7 @@ function App() {
       canvasRef.current.height = videoHeight;
 
       const face = await net.estimateFaces({input: video});
-      const ctx = canvasRef.current.getContext('2d');
+      const ctx = canvasRef.current.getContext('2d');   //canvas
       drawMesh(face, ctx);
     }
   };
@@ -53,6 +53,7 @@ function App() {
           textAlign: "center",
           width: 640,
           height: 400,
+          // visibility: "hidden"
         }}
       />
 
