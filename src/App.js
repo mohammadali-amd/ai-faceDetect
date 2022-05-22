@@ -53,7 +53,7 @@ function App() {
           textAlign: "center",
           width: 640,
           height: 400,
-          // visibility: "hidden"
+          visibility: "hidden"
         }}
       />
 
